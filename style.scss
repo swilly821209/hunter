@@ -1,0 +1,80 @@
+$green-color: #1c9963;
+$hr:rgba(0,0,0,.1);
+$title-size:35px;
+.wrap{
+    width: 1032px;
+    margin: 0 auto;
+    font-family: medium-content-sans-serif-font,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+ }
+.metabar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:15px 0;
+}
+.metabar img{
+    width: 45px;
+    height:45px;;
+}
+.buttonset a{
+    text-decoration: none;
+    color:$green-color;
+}
+.signIn{
+    margin-right: 16px;
+}
+.started{
+    border: 1px solid $green-color;
+    padding:5px 16px;
+    border-radius: 4px;
+}
+.header{
+    width: 1000px;
+    padding: 0 20px;
+    margin-bottom: 5px;
+}
+.bigLogo{
+    max-width: 476px;
+    margin: 45px 0;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.twitter{
+    margin: 0 8px;
+}
+.follow{
+    border: 1px solid $green-color;
+    padding: 1px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: $green-color;
+}
+hr{
+    border-color: $hr;
+    margin: 15px 0;
+}
+.nuxtImg{
+    background: url('https://cdn-images-1.medium.com/max/1250/1*BkRCeibWDrtp2-K3f28q_g.jpeg');
+    width: 650px;
+    height: 350px;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin: 0 15px;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+.bigContent{
+    width: 345px;
+     
+}
+.bigContent h3{
+    font-size: $title-size;
+    font-family: medium-content-sans-serif-font,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
+   
+
+}
