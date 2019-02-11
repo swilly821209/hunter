@@ -1,6 +1,8 @@
 $green-color: #1c9963;
+$gray-color:rgba(0,0,0,.54);
 $hr:rgba(0,0,0,.1);
-$title-size:35px;
+$title-size:38px;
+$small-title:24px;
 .wrap{
     width: 1032px;
     margin: 0 auto;
@@ -58,23 +60,68 @@ hr{
 }
 .nuxtImg{
     background: url('https://cdn-images-1.medium.com/max/1250/1*BkRCeibWDrtp2-K3f28q_g.jpeg');
-    width: 650px;
+    width: 655px;
     height: 350px;
     background-size: cover;
     background-position: 50% 50%;
-    margin: 0 15px;
+    margin: 0 13px;
 }
 .content{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .bigContent{
-    width: 345px;
+    width: 320px;
      
 }
 .bigContent h3{
     font-size: $title-size;
-    font-family: medium-content-sans-serif-font,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
-   
-
+    font-family:fantasy;
+    line-height: 1.3;
+}
+.bigContent p{
+    line-height: 1.2;
+}
+.person{
+   width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+.person img{
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+}
+.personName{
+    line-height: 1.2;
+}
+.personName a{
+    text-decoration: none;
+    color:$green-color;
+}
+.smallContent{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin:50px 0;
+}
+.smallContent li{
+    width: 315px;
+}
+.smallContent li a{
+    display: block;
+    background: url("https://cdn-images-1.medium.com/max/500/1*bqG3RoXHBpwyhrb3g2_STQ.jpeg");
+    background-position: center;
+    background-size: cover; 
+    width: 315px;
+    height: 175px;
+}
+.smallContent li h4{
+    font-size: $small-title;
+    line-height: 1.2;
+}
+.smallContent li p{
+    line-height: 1.5;
+    color:$gray-color;
+    margin: 10px 0;
 }
