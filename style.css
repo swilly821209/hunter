@@ -13,7 +13,10 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin: 15px 0; }
+  margin: 15px 0;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 1032px;
+  flex: 1 1 1032px; }
 
 .metabar img {
   width: 45px;
@@ -98,7 +101,8 @@ hr {
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin: 20px 0; }
 
 .person img {
   border-radius: 50%;
@@ -106,7 +110,8 @@ hr {
   height: 36px; }
 
 .personName {
-  line-height: 1.2; }
+  line-height: 1.2;
+  position: relative; }
 
 .personName a {
   text-decoration: none;
@@ -120,12 +125,13 @@ hr {
   justify-content: space-around;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: 50px 0; }
+  margin: 50px 0;
+  padding: 13px; }
 
 .smallContent li {
   width: 315px; }
 
-.smallContent li a {
+.linkImg {
   display: block;
   background: url("https://cdn-images-1.medium.com/max/500/1*bqG3RoXHBpwyhrb3g2_STQ.jpeg");
   background-position: center;
@@ -141,3 +147,50 @@ hr {
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.54);
   margin: 10px 0; }
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+
+.footer a {
+  color: rgba(0, 0, 0, 0.54);
+  text-decoration: none;
+  display: block; }
+
+.footer a:hover {
+  color: #000; }
+
+.personTooltip {
+  visibility: hidden;
+  width: 260px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #000;
+  padding: 5px 0;
+  position: absolute;
+  background: #FFF;
+  z-index: 1;
+  bottom: 150%;
+  left: -20%;
+  margin-left: -60px; }
+
+.personTooltip::after {
+  content: "";
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background: #FFF;
+  -webkit-box-shadow: 1px 1px 1px -1px #000;
+  box-shadow: 1px 1px 1px -1px #000; }
+
+.person:hover .personTooltip {
+  visibility: visible; }

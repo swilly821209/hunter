@@ -1,5 +1,6 @@
 $green-color: #1c9963;
 $gray-color:rgba(0,0,0,.54);
+$black-color:#000;
 $hr:rgba(0,0,0,.1);
 $title-size:38px;
 $small-title:24px;
@@ -11,13 +12,17 @@ $small-title:24px;
 .metabar{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content:space-between;
     margin:15px 0;
+    flex:1 1 1032px;
 }
+
 .metabar img{
     width: 45px;
-    height:45px;;
+    height:45px;
+   
 }
+
 .buttonset a{
     text-decoration: none;
     color:$green-color;
@@ -86,6 +91,8 @@ hr{
    width: 150px;
     display: flex;
     justify-content: space-between;
+    margin: 20px 0;
+   
 }
 .person img{
     border-radius: 50%;
@@ -94,6 +101,7 @@ hr{
 }
 .personName{
     line-height: 1.2;
+    position: relative;
 }
 .personName a{
     text-decoration: none;
@@ -104,11 +112,13 @@ hr{
     justify-content: space-around;
     flex-wrap: wrap;
     margin:50px 0;
+    padding: 13px;
 }
 .smallContent li{
     width: 315px;
+    
 }
-.smallContent li a{
+.linkImg{
     display: block;
     background: url("https://cdn-images-1.medium.com/max/500/1*bqG3RoXHBpwyhrb3g2_STQ.jpeg");
     background-position: center;
@@ -124,4 +134,44 @@ hr{
     line-height: 1.5;
     color:$gray-color;
     margin: 10px 0;
+}
+.footer{
+    display: flex;
+    justify-content: flex-end;
+}
+.footer a{
+    color: $gray-color;
+    text-decoration: none;
+    display: block;
+}
+.footer a:hover{
+    color:$black-color;
+}
+.personTooltip{
+    visibility: hidden;
+    width: 260px;
+    text-align: center;
+    border-radius: 6px;
+    border:1px solid $black-color;
+    padding: 5px 0;
+    position: absolute;
+    background: #FFF;
+    z-index: 1;
+    bottom: 150%;
+    left: -20%;
+    margin-left: -60px;
+}
+.personTooltip::after {
+    content: "";
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    background: #FFF;
+    box-shadow: 1px 1px 1px -1px $black-color;
+  }
+.person:hover .personTooltip {
+    visibility: visible;
 }
