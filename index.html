@@ -23,8 +23,8 @@
             <div class="big-logo"></div>
             <div class="navbar">
                 <div class="search">
-                    <img  src="img/search.svg" class="search-icon">
-                    <input type="text" class="search-input" placeholder="Search Vue Mastery">
+                    <img src="img/search.svg" class="search-icon" @click="start">
+                    <input type="text" class="search-input" placeholder="Search Vue Mastery" :class="{ 'search-start' : toggle }">
                     <a href="#" class="twitter" title="Visit “Vue Mastery” on Twitter"><img src="img/twitter.svg"></a>
                     <a href="#" class="faceBook" title="Visit “Vue Mastery” on Facebook"><img src="img/facebook.svg"></a>
                 </div>
@@ -176,15 +176,15 @@
 
         </div>
 
-
-        <script type="text/x-template" id="persontooltip">
+    </div>
+    <script type="text/x-template" id="persontooltip">
         <div class="personTooltip">
             <slot></slot>
                       
         </div>
     </script>
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <script src="js/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
