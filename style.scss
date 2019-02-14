@@ -51,6 +51,18 @@ $small-title: 24px;
     justify-content: space-between;
     align-items: center;
 }
+.search{
+    display: flex;
+    align-items: center;
+}
+.search-input{
+    display: none;
+    border: none;
+    border-bottom: 1px solid $gray-color;
+}
+.search:focus .search-input{
+    display: block;
+}
 .twitter{
     margin: 0 8px;
 }
@@ -181,4 +193,5 @@ hr{
 }
 .tip {
     display: flex;
+   
 }
